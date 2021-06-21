@@ -1,9 +1,7 @@
-package executionEngine;
-
 import keywordDriven.ActionKeywords;
 import excelUtility.ReadExcelSheet;
 
-public class ExecutionTest {
+public class TestCase02 {
     public static void main(String[] args) throws Exception {
         ReadExcelSheet rs = new ReadExcelSheet();
         rs.readExcelData(4);
