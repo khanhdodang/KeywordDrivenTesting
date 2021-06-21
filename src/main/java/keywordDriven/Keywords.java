@@ -70,4 +70,32 @@ public class Keywords {
         }
         return null;
     }
+
+    private By locatorValue(String locatorType, String value) {
+        By by;
+        switch (locatorType) {
+            case "id":
+                by = By.id(value);
+                break;
+            case "name":
+                by = By.name(value);
+                break;
+            case "xpath":
+                by = By.xpath(value);
+                break;
+            case "css":
+                by = By.cssSelector(value);
+                break;
+            case "linkText":
+                by = By.linkText(value);
+                break;
+            case "partialLinkText":
+                by = By.partialLinkText(value);
+                break;
+            default:
+                by = null;
+                break;
+        }
+        return by;
+    }
 }
